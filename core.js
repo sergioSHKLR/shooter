@@ -220,7 +220,7 @@ Core.histMigrate=function(h){return (Array.isArray(h)?h:[]).filter(r=>r&&typeof 
 Core.histExport=(runs,firearms)=>({app:'laser-drills',kind:'history',version:1,exported:new Date().toISOString(),firearms:firearms||[],runs:Core.histMigrate(runs)});
 // returns {runs,firearms,added,skipped} or throws Error with a user-facing message
 Core.histImport=function(cur,curFw,data,mode){if(typeof data==='string'){try{data=JSON.parse(data);}catch(e){throw new Error('Not valid JSON: '+e.message);}}
-  if(Array.isArray(data))data={runs:data};if(!data||typeof data!=='object'||!Array.isArray(data.runs))throw new Error('Not a Laser Drills history file (missing "runs" array).');
+  if(Array.isArray(data))data={runs:data};if(!data||typeof data!=='object'||!Array.isArray(data.runs))throw new Error('Not a SHOOTER history file (missing "runs" array).');
   if(data.app&&data.app!=='laser-drills')throw new Error('File is from another app: '+data.app);
   const bad=data.runs.filter(r=>!r||typeof r.ts!=='number'||typeof r.drill!=='string').length;if(bad)throw new Error(bad+' run(s) are missing ts/drill — file rejected, nothing imported.');
   const fws=(Array.isArray(data.firearms)?data.firearms:[]).filter(f=>f&&f.id&&f.name);const inc=Core.histMigrate(data.runs);

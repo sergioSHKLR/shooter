@@ -236,7 +236,7 @@ def draw_target(key,t,path,maskmode=False):
     c.drawString(*d.P(hx,M+0.78),fitfont(c,f"Recommended distance: {t['distance']}",'Helvetica',8.5,hw))
     dn=[DRILLS[x]['name'] for x in t['drills'] if x in DRILLS]
     if dn: c.drawString(*d.P(hx,M+1.0),fitfont(c,'Pairs with: '+'; '.join(dn),'Helvetica',8.5,hw))
-    c.setFont('Helvetica-Bold',7); c.drawRightString(*d.P(hx+hw-0.03,M+0.3),'LASER DRILLS')
+    c.setFont('Helvetica-Bold',7); c.drawRightString(*d.P(hx+hw-0.03,M+0.3),'SHOOTER')
     # footer band: instructions | legend
     fy=PH-M-MS; c.setFont('Helvetica-Bold',8); c.drawString(*d.P(hx,fy+0.12),'HOW TO')
     c.setFont('Helvetica',7.2)
@@ -304,7 +304,7 @@ def write_gallery(DOC):
         cards.append(dict(k=k,code=t['code'],name=t['name'],dist=t.get('distance',''),**m,text=' '.join([k,t['code'],t['name'],t.get('distance','')]+t.get('instructions',[])).lower()))
     json.dump({**DOC,'template':BASE},open('targets.json','w'),indent=1)   # TPL (=DOC['template']) is mutated per target
     data=json.dumps(cards)
-    page=r"""<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Laser Drills targets</title>
+    page=r"""<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>SHOOTER targets</title>
 <style>
 body{font:15px system-ui,sans-serif;background:#111;color:#eee;margin:0;padding:12px}a{color:#8ab4f8}h1{margin:.2em 0;font-size:1.4em}
 .bar{background:#111;padding:6px 0 8px;z-index:2;border-bottom:1px solid #333}
@@ -342,7 +342,7 @@ document.getElementById('q').oninput=draw;draw();
 </script>"""
     open('targets/catalog.json','w').write(data)
     # Gallery moved into the app (Home tab); keep old URL working. PDFs/PNGs stay in targets/.
-    open('targets/index.html','w').write("<!doctype html><meta charset=utf-8><title>Laser Drills targets</title><meta http-equiv=refresh content='0;url=../#home'><script>location.replace('../#home'+(location.search?'':''))</script><p>Moved: <a href='../#home'>target gallery in the app</a></p>")
+    open('targets/index.html','w').write("<!doctype html><meta charset=utf-8><title>SHOOTER targets</title><meta http-equiv=refresh content='0;url=../#home'><script>location.replace('../#home'+(location.search?'':''))</script><p>Moved: <a href='../#home'>target gallery in the app</a></p>")
 if __name__=='__main__':
     os.makedirs('targets',exist_ok=True)
     print('\n'.join(check_palette()))

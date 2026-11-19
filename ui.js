@@ -1,4 +1,4 @@
-// Laser Drills UI shell: tabs/router, gallery, drill picker, results history. Uses globals from app.js.
+// SHOOTER UI shell: tabs/router, gallery, drill picker, results history. Uses globals from app.js.
 const UI={view:'home',tf:null,dc:'training',chips:new Set(),cat:[],gS:{},rr:1};
 const esc=s=>String(s==null?'':s).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
 const VIEWS=['home','drills','courses','shoot','results','settings','calibrate'];
@@ -114,8 +114,8 @@ document.querySelectorAll('#rseg button').forEach(b=>b.onclick=()=>{UI.rr=+b.dat
 $('csvBtn').onclick=()=>{const h=hist(),K=['ts','drill','cat','shots','time','score','max','final','raw','pd','pe','hnt','fail','game','blind','fr','frLate','frComply','frPen','course','stage','pass','fw','firearm','id'];
   const q=v=>v==null?'':/[",\n]/.test(String(v))?'"'+String(v).replace(/"/g,'""')+'"':String(v);
   const csv=[['date',...K.slice(1)].join(',')].concat(h.map(r=>[new Date(r.ts).toISOString(),...K.slice(1).map(k=>q(k==='firearm'?fwName(r.fw):r[k]))].join(','))).join('\n');
-  dl(csv,'text/csv','laser-drills-history.csv');};
-$('jsonBtn').onclick=()=>dl(JSON.stringify(Core.histExport(hist(),fws()),null,1),'application/json',`laser-drills-history-${new Date().toISOString().slice(0,10)}.json`);
+  dl(csv,'text/csv','shooter-history.csv');};
+$('jsonBtn').onclick=()=>dl(JSON.stringify(Core.histExport(hist(),fws()),null,1),'application/json',`shooter-history-${new Date().toISOString().slice(0,10)}.json`);
 $('impBtn').onclick=()=>{$('impMsg').innerHTML='';$('impFile').value='';$('impDlg').showModal();};$('impNo').onclick=()=>$('impDlg').close();
 $('impYes').onclick=async()=>{const f=$('impFile').files[0],m=$('impMsg');if(!f){m.innerHTML='<div class=err>Choose a .json file first.</div>';return;}
   try{const txt=await f.text(),mode=$('impMode').value;if(mode==='replace'&&!confirm('Replace ALL current runs and firearms with this file?'))return;
