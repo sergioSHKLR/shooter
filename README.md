@@ -1,3 +1,5 @@
+<p align="center" data-brand-icon><img src="brand-kit/shooter/icons/tile-dark.svg" alt="SHOOTER" width="128" height="128"></p>
+
 <p align="center"><img src="brand/wordmark.svg" alt="SHOOTER" width="420"></p>
 
 # SHOOTER: dry-fire laser trainer (PWA)
