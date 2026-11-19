@@ -1,10 +1,10 @@
-<p align="center"><img src="brand/wordmark.svg" alt="LASER DRILLS" width="420"></p>
+<p align="center"><img src="brand/wordmark.svg" alt="SHOOTER" width="420"></p>
 
-# Laser Drills: dry-fire laser trainer (PWA)
+# SHOOTER: dry-fire laser trainer (PWA)
 
-**Live:** https://sergioshklr.github.io/laser-drills/ · **Repo:** `sergioSHKLR/laser-drills`
+**Live:** https://sergioshklr.github.io/shooter/ · **Repo:** `sergioSHKLR/shooter` (formerly Laser Drills / `laser-drills`; the old URL redirects here)
 
-Laser Drills is a free, installable web app for laser dry-fire training. It's a full-featured alternative to commercial laser-trainer apps. You print a target, point your phone or laptop camera at it, and shoot with any laser cartridge or trainer. The app finds the target by its four ArUco corner markers, detects each laser flash, scores it against the target's zone map, and times it from a random start beep. Everything runs in the browser and works offline.
+SHOOTER (formerly Laser Drills) is a free, installable web app for laser dry-fire training. It's a full-featured alternative to commercial laser-trainer apps. You print a target, point your phone or laptop camera at it, and shoot with any laser cartridge or trainer. The app finds the target by its four ArUco corner markers, detects each laser flash, scores it against the target's zone map, and times it from a random start beep. Everything runs in the browser and works offline.
 
 ![Social preview](og-image.png)
 
@@ -185,7 +185,7 @@ python3 test/editor_test.py  # zone editor (headless)
 Also check by hand: serve with `python3 -m http.server`, open each tab at phone and desktop widths, and check that there are no console errors and icons render. See [docs/development.md](docs/development.md).
 
 ## Deployment
-GitHub Pages serves `main` from the repo root. Bump the cache name in `sw.js` (`ld-vNN`) with every release, push to `main`, wait about 1 minute, then check `https://sergioshklr.github.io/laser-drills/sw.js`.
+GitHub Pages serves `main` from the repo root. Bump the cache name in `sw.js` (`ld-vNN`) with every release, push to `main`, wait about 1 minute, then check `https://sergioshklr.github.io/shooter/sw.js`.
 
 ## Credits and licenses
 - **Lucide icons** © Lucide Contributors, ISC License (`vendor/lucide/LICENSE`), https://lucide.dev
