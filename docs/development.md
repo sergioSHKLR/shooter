@@ -14,7 +14,6 @@ The camera needs a secure context, so use localhost or HTTPS.
 | `tools_diehard_safe.py` | Laser-safe color pass: no red in scoring zones, red-dominance under about 40, readable grayscale steps |
 | `tools_courses.py` | Writes `courses.json` |
 | `tools_icons.py` | Builds the Lucide sprite from an extracted `lucide-static` npm tarball (`npm pack lucide-static && tar xzf …` into `/tmp/package`). Writes `vendor/lucide/sprite.svg` and `LICENSE`, and inlines the sprite between `<!--LUCIDE-->` markers in `index.html`. To add an icon, add its name to the list in the script, re-run it, and use `I('name')` in JS or `<svg class=ic><use href="#i-name"/></svg>` in HTML |
-| `tools_pwa_assets.py` | Favicons, apple-touch and maskable icons, `og-image.png` |
 
 ## Tests
 ```
@@ -38,4 +37,4 @@ Manual check before a release: headless Chromium at 390 and 1280 widths, every t
 
 ## Branding
 
-- `brand/wordmark.svg`, `brand/mark.svg`; raster icons/og image from `tools_pwa_assets.py`. Red only in the bullseye centre; printed target sheets stay red-free.
+- `brand/wordmark.svg`, `brand/mark.svg`; raster icons/og image from the SHKLR brand kit (`tools_pwa_assets.py` retired). Red only in the bullseye centre; printed target sheets stay red-free.

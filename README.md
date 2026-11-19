@@ -175,7 +175,6 @@ In short (full schemas are in [docs/data-formats.md](docs/data-formats.md)):
 | `tools_courses.py` | `courses.json` |
 | `tools_icons.py` | Lucide sprite (inlined into `index.html` and `vendor/lucide/sprite.svg`); needs an extracted `lucide-static` package |
 | `tools_silhouette.py` | Qualification silhouette spec (line art + X/10/9/8 zones) |
-| `tools_pwa_assets.py` | Favicons, maskable and apple-touch icons, `og-image.png` |
 
 ## Testing
 ```
@@ -200,4 +199,4 @@ Settings › About shows the semver version (starting 1.0.0), build date/time (A
 
 ## Branding
 
-`brand/wordmark.svg` (gray bold LASER ◎ DRILLS) and `brand/mark.svg` (bullseye). Red appears only in the bullseye centre of the app/brand art, never on printed sheets (the PDF header is plain text). Icons, maskable icons, favicons and `og-image.png` are regenerated with `python3 tools_pwa_assets.py`.
+`brand/wordmark.svg` (SHOOTER lockup) and `brand/mark.svg` (bullseye tile) come from the SHKLR brand kit (final, Nov 2026), as do the favicons, PWA, maskable, monochrome and apple-touch icons, `og-image.png` and `x-card.png`. Red appears only in the bullseye centre of the app/brand art, never on printed sheets (the PDF header is plain text). `tools_pwa_assets.py` was retired so a rebuild cannot restore the old icons; update them from the kit.

@@ -1,7 +1,7 @@
 {
  "id": "/laser-drills/",
- "name": "LASER DRILLS — Dry-Fire Trainer",
- "short_name": "LASER DRILLS",
+ "name": "SHOOTER — Dry-Fire Trainer",
+ "short_name": "SHOOTER",
  "description": "Free laser dry-fire trainer: printable ArUco targets, camera hit detection, timed drills, courses and qualification badges, voice start. Works offline.",
  "lang": "en",
  "dir": "ltr",
@@ -44,6 +44,12 @@
    "sizes": "512x512",
    "type": "image/png",
    "purpose": "maskable"
+  },
+  {
+   "src": "icons/monochrome-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "monochrome"
   },
   {
    "src": "favicon.svg",
