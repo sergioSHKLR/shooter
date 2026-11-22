@@ -4,7 +4,7 @@
 
 # SHOOTER: dry-fire laser trainer (PWA)
 
-**Live:** https://sergioshklr.github.io/shooter/ · **Repo:** `sergioSHKLR/shooter` (formerly Laser Drills / `laser-drills`) · **Brand:** [brand-kit/](brand-kit/README.md) (SHKLR brand kit, final 19 Nov 2026)
+**Live:** https://sergioshklr.github.io/shooter/ · **Repo:** `sergioSHKLR/shooter` (formerly Laser Drills / `laser-drills`) · **Brand:** [brand-kit/](brand-kit/README.md) (SHKLR brand kit, rev 4, 22 Nov 2026)
 
 SHOOTER (formerly Laser Drills) is a free, installable web app for laser dry-fire training. It's a full-featured alternative to commercial laser-trainer apps. You print a target, point your phone or laptop camera at it, and shoot with any laser cartridge or trainer. The app finds the target by its four ArUco corner markers, detects each laser flash, scores it against the target's zone map, and times it from a random start beep. Everything runs in the browser and works offline.
 

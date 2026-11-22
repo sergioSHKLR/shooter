@@ -1,14 +1,15 @@
-/* SHKLR brand kit — colour tokens (final, approved 19 Nov 2026). Generated; do not hand-edit. */
+/* SHKLR brand kit — colour tokens (rev 4, 22 Nov 2026; rev 3 approved 19 Nov 2026). Generated; do not hand-edit. */
 :root {
   --shklr-ink: #111111;
   --shklr-ink-inverse: #f2f2f2;
   --shklr-hairline: #cfcfcf;
-  --shooter-plate: #5f6670;
+  --shooter-plate: #666666;
   --shooter-ink: #f2f2f2;
-  --shooter-muted: #e3e4e5;
-  --shooter-glyph-1: #111111; /* rings + centre outline · 3.26:1 */
-  --shooter-glyph-2: #111111; /* rings vs white face · 18.88:1 */
-  --shooter-app-bg: #0f1115; /* app/theme/OG background; icon plate #5f6670 (3.26:1 vs bg) */
+  --shooter-muted: #e4e4e4;
+  --shooter-glyph-1: #ffffff; /* detail · 5.74:1 */
+  --shooter-glyph-2: #111111; /* rings + centre outline · 3.29:1 */
+  --shooter-glyph-3: #e00000; /* detail · 1.14:1 */
+  --shooter-app-bg: #0f1115; /* app/theme/OG background; icon plate #666666 (3.29:1 vs bg) */
   --shooter-app-ink: #f2f2f2;
   --shooter-app-muted: #a3a3a5;
 }

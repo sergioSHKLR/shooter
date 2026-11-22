@@ -1,27 +1,32 @@
 {
- "_note": "SHKLR brand kit final (approved 19 Nov 2026). plate = icon/tile background = app surface it was sampled from; ink/muted = text on that plate; glyph = icon stroke/fill colours with WCAG contrast vs plate.",
+ "_note": "SHKLR brand kit rev 4 (22 Nov 2026; rev 3 approved 19 Nov 2026). plate = icon/tile background = app surface it was sampled from; ink/muted = text on that plate; glyph = icon stroke/fill colours with WCAG contrast vs plate.",
  "apps": {
   "shooter": {
    "name": "SHOOTER",
    "mode": "single",
    "plates": {
     "dark": {
-     "plate": "#5f6670",
-     "source": "icon plate grey; app/theme/OG background stays live #0f1115",
+     "plate": "#666666",
+     "source": "icon plate grey #666666 (Chief rev 4, was #5f6670); app/theme/OG background stays live #0f1115",
      "ink": "#f2f2f2",
-     "muted": "#e3e4e5",
-     "ink_contrast": 5.18,
-     "muted_contrast": 4.56,
+     "muted": "#e4e4e4",
+     "ink_contrast": 5.13,
+     "muted_contrast": 4.52,
      "glyph": [
+      {
+       "role": "detail",
+       "hex": "#ffffff",
+       "contrast": 5.74
+      },
       {
        "role": "rings + centre outline",
        "hex": "#111111",
-       "contrast": 3.26
+       "contrast": 3.29
       },
       {
-       "role": "rings vs white face",
-       "hex": "#111111",
-       "contrast": 18.88
+       "role": "detail",
+       "hex": "#e00000",
+       "contrast": 1.14
       }
      ]
     }
@@ -32,8 +37,8 @@
     "hex": "#0f1115",
     "ink": "#f2f2f2",
     "muted": "#a3a3a5",
-    "note": "theme-color, manifest and social-card background; icon plate stays #5f6670",
-    "icon_plate_contrast_vs_bg": 3.26
+    "note": "theme-color, manifest and social-card background; icon plate stays #666666",
+    "icon_plate_contrast_vs_bg": 3.29
    }
   }
  }
